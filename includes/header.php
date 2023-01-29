@@ -1,3 +1,5 @@
+<?php $body_class = $body_class ?? ''; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,8 +11,7 @@
     <title>CB341</title>
 </head>
 
-<body>
+<body class="<?= $body_class ?>">
     <header>
         <?php include 'includes/nav.php'; ?>
     </header>
-    <main>

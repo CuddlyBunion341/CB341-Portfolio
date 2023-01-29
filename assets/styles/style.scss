@@ -1,17 +1,20 @@
 $primary: #3b5998;
 $secondary: #121212;
 
+$bg-primary: #121212;
+$bg-secondary: #191b1c;
+
 body {
 	font-family: "Segoe UI", Ubuntu, "Helvetica Neue", Sans-Serif;
 	margin: 0;
 	padding: 0;
-	background-color: #121212;
+	background-color: $bg-primary;
 	color: white;
 	min-height: 100vh;
 }
 
 nav {
-	background-color: #212121;
+	background-color: $bg-secondary;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 	ul {
 		margin: 0;
@@ -62,4 +65,41 @@ nav {
 
 main {
 	padding: 0 20px;
+}
+
+.projects {
+	display: flex;
+	justify-self: center;
+	flex-wrap: wrap;
+}
+
+.projects-page {
+	> h1 {
+		text-align: center;
+	}
+}
+
+.card {
+	background-color: $bg-secondary;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	padding: 10px;
+	margin: 10px;
+	flex: 1;
+	flex-direction: column;
+	&.project {
+		> h2,
+		> p,
+		> a {
+			margin: 5px;
+		}
+
+		.github-link {
+			text-align: right;
+			img {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
 }
