@@ -23,7 +23,7 @@ include 'includes/header.php';
             'name' => 'CB341.NET',
             'description' => 'This website.',
             'url' => 'https://www.cb341.net',
-            'github' => '',
+            'github' => 'https://github.com/CuddlyBunion341/CB341-Portfolio',
             'languages' => array('PHP', 'JavaScript'),
         ),
         array(
