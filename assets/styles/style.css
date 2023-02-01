@@ -1,10 +1,20 @@
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 body {
   font-family: "Segoe UI", Ubuntu, "Helvetica Neue", Sans-Serif;
   margin: 0;
   padding: 0;
   background-color: #121212;
   color: white;
-  min-height: 100vh;
+  min-height: 110vh;
+}
+
+main {
+  padding: 0 60px;
 }
 
 nav {
@@ -13,9 +23,6 @@ nav {
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 nav ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
   counter-reset: css-counter 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,13 +41,6 @@ nav ul li:before {
 }
 nav ul li.logo {
   counter-increment: none;
-  padding: 0 10px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -59,10 +59,6 @@ nav ul a {
 }
 nav ul a.active {
   text-decoration: underline;
-}
-
-main {
-  padding: 0 20px;
 }
 
 .projects {
@@ -86,22 +82,101 @@ main {
   padding: 10px;
   margin: 10px;
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+      -ms-flex: 1 1 400px;
+          flex: 1 1 400px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+.card.project {
+  position: relative;
+}
+.card.project:hover .links,
+.card.project:hover .languages {
+  opacity: 1;
 }
 .card.project > h2,
 .card.project > p,
 .card.project > a {
   margin: 5px;
 }
-.card.project .github-link {
-  text-align: right;
+.card.project img {
+  width: 100%;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 16/9;
 }
-.card.project .github-link img {
-  width: 30px;
-  height: 30px;
+.card.project .links {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0.5;
+}
+.card.project .links a img {
+  width: 25px;
+  height: 25px;
+}
+.card.project .languages {
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0.5;
+}
+.card.project .language {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #121212;
+  color: white;
+  font-size: 0.8em;
+  margin: 5px;
+  color: black;
+  cursor: pointer;
+}
+.card.project .language.php {
+  background-color: #ff9a9e;
+}
+.card.project .language.js {
+  background-color: #feca57;
+}
+.card.project .language.ts {
+  background-color: #54a0ff;
+}
+.card.project .language.react {
+  background-color: #00d2d3;
+}
+.card.project .language.rails {
+  background-color: #ff6b6b;
+}
+.card.project .language.threejs {
+  background-color: #ff9f43;
+}
+.card.project .language.mysql {
+  background-color: #ff9f43;
+}
+
+.social {
+  position: fixed;
+  background-color: #191b1c;
+  border-radius: 10px;
+  bottom: 10px;
+  left: 10px;
+  padding: 5px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.social img {
+  max-height: 30px;
+  margin: 3px 0;
 }
