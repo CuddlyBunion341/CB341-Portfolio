@@ -8,13 +8,16 @@
     <p>
         I enjoy playing video games, reading books and programming.
 
-    <figure>
+    <figure class="about-img">
         <img src="assets/images/astroneer_cover.jpg" alt="">
         <figcaption>Astroneer</figcaption>
     </figure>
-    <figure>
+    <figure class="about-img">
         <img src="assets/images/minecraft_cover.png" alt="">
         <figcaption></figcaption>
+    </figure>
+    <figure class="about-img">
+        <img src="assets/images/about/pc.png" alt="My pc" srcset="">
     </figure>
     </p>
 </main>

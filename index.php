@@ -16,12 +16,16 @@
             <img
                 src="https://github-readme-stats.vercel.app/api?username=CuddlyBunion341&show_icons=true&theme=radical">
         </a>
-    <h3>Languages</h3>
-    <ul>
-        <li>PHP</li>
-        <li>TypeScript</li>
-        <li>Ruby on Rails</li>
-        <li>React</li>
+    <h3>Technologies</h3>
+    <ul class="lang-image__wrapper">
+        <?php
+
+        $langs = array('php', 'rails', 'react', 'typescript', 'sql', 'threejs', 'apple');
+
+        foreach ($langs as $lang) {
+            echo '<li><img src="assets/images/languages/' . $lang . '.png" alt="' . $lang . '" class="lang-image"></li>';
+        }
+        ?>
     </ul>
     </p>
 
